@@ -1,0 +1,51 @@
+---
+layout: post
+---
+
+{% include head.html %}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+      
+    <div class="post-header-img" {% if page.featured-img %} style="background-image: url('{{ page.featured-img }}');" {% endif %}></div>
+
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+      
+      <div class="post-logo"></div>
+      
+      <a href="/index.html">
+          <div class="home-button"></div>
+      </a>
+      
+      <div class="post-info">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>  
+
+        <p class="post-meta">       
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}
+            {{ page.date | date: date_format }}
+          </time>
+
+          {% if page.author %}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+          {% endif %}
+        </p>
+      </div>
+      
+      {% for image in site.static_files %}
+        {% if image.path contains page.image_folder %}
+            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+        {% endif %}
+      {% endfor %}
+      
+    {{ content }}
+      
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

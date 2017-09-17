@@ -1,0 +1,197 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: quicksand;
+    background: lightgrey;
+}
+
+#logo {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: 271px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -170px;
+    background: url(garagesparks-white.png)center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#glass {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    background: lightpink;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+#down-button {
+    position: absolute;
+    grid-area: header;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    border: solid white 3px;
+    border-radius: 50%;
+    bottom: 30px;
+    left: 50%;
+    opacity: 0.8;
+    background: url(down-icon.png) no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#down-button:hover {
+    opacity: 1;
+    background: hotpink;
+    transition: all ease-in-out;
+    cursor: pointer;
+}
+
+.post-list {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+    img {
+        width: 70%;
+        height: 500px;
+    }
+    hr {
+        padding: 0px 20px 0px 20px;
+        border-color: rgba(0,0,0,0.2);
+        margin: 20px 0px 40px 0px;
+    }
+}
+    
+.wrapper {
+    display: grid;
+    grid-template-columns: 80vw 20vw;
+    grid-template-rows: 100vh auto 200px;
+/*        grid-gap: 5px 5px;*/
+    grid-template-areas: 
+        "header header"
+        "content side"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    overflow: hidden;
+}
+
+.header-img {
+    width: 100%;
+    height: 1500px;
+    background: url(header-bg4.jpg) 0% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.page-content {
+    background: white;
+    grid-area: content;
+    padding: 30px;
+    z-index: 10;
+    h2 {
+        margin: 10px 0px 0px 0px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}  
+
+.side {
+    position: relative;
+    background: white;
+    grid-area: side;
+    z-index: 10;
+    .side-shadow {
+        position: absolute;
+        top: 0px;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0) 100%);
+    }
+    #media {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.site-footer {
+    background: teal;
+    grid-area: footer;
+}
+
+.post-header-img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+//    background-position: 0% 90%;
+    background-repeat: no-repeat;
+}
+
+.home-button {
+    background: url(house.svg) center;
+    background-repeat: no-repeat;
+    background-size: 38px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    top: -55px;
+    left: -30px;
+    border-radius: 10px 10px 0px 0px; 
+    position: relative;
+}
+
+.post-logo {
+    position: absolute;
+    top: -300px;
+    left: 0px;
+    height: 250px;
+    width: 100%;
+    background: url(garagesparks-white.png)center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    z-index: 20;
+}
+
+.post-content {
+    position: relative;
+    top: -150px;
+    width: 80%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 30px 5px 30px;
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    img {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+    .post-info {
+        font-family: sans-serif;
+        margin-bottom: 20px;
+        h1 {
+            margin: 5px 0px 5px 0px;
+        }
+        .post-meta {
+            margin: 0px;
+        }
+    }
+}

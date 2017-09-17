@@ -1,0 +1,23 @@
+---
+layout: default
+featured-img: /assets/posts/japfest-silverstone/featured.jpg
+---
+
+  <h1 class="page-heading">Postsss</h1>
+  
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <img src="{{ post.featured-img }}" alt="image"><br>
+        <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }} | {{ post.category }}</a></h2>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <hr>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+
