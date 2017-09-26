@@ -32,16 +32,19 @@ layout: post
           {% if page.author %}
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
           {% endif %}
+            
+          {{ content }}
+            
         </p>
       </div>
+      
+      <hr>
       
       {% for image in site.static_files %}
         {% if image.path contains page.image_folder %}
             <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         {% endif %}
       {% endfor %}
-      
-    {{ content }}
       
   </div>
 
