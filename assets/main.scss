@@ -74,6 +74,7 @@ body, html {
     }
     img {
         width: 100%;
+        border: solid black 10px;
     }
     hr {
         padding: 0px 20px 0px 20px;
@@ -108,9 +109,13 @@ body, html {
 }
 
 .page-heading {
-    max-width: 80%;
+    max-width: 40%;
     margin: 0px auto 30px auto;
+    padding: 20px;
     font-size: 34px;
+    background: black;
+    color: white;
+    text-align: center;
 }
 
 .page-content {
