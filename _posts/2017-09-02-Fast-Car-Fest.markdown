@@ -2,10 +2,8 @@
 layout: post
 title:  "Fast Car Festival"
 date:   2017-06-07 14:40:31 +0100
-featured-img: /assets/posts/other1/featured.jpg
 image_folder: /assets/images/fast-car-fest
-pagination: 
-  enabled: true
+category: event-coverage
 ---
 
 <p>Hot off the heels of our record breaking 2016 event The Fast Car Festival makes a full throttle return to the iconic Donington Park on 2nd July 2017!  

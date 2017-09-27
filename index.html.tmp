@@ -6,6 +6,7 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 ---
 
+<!--
 <ul class="post-list">
   {% for post in paginator.posts %}
     <li>
@@ -19,7 +20,9 @@ comments: false
     </li>
   {% endfor %}
 </ul>
+-->
 <!-- Pagination links -->
+<!--
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
@@ -33,3 +36,4 @@ comments: false
     <span class="next ">Next</span>
   {% endif %}
 </div>
+-->

@@ -1,16 +1,13 @@
 ---
 layout: default
-featured-img: /assets/posts/japfest-silverstone/featured.jpg
-pagination: 
-  enabled: true
 ---
 
 <h1 class="page-heading">Latest Articles</h1>
 
 <ul class="post-list">
 {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url | relative_url }}"><img src="{{ post.featured-img }}" alt="image"><br>
+  <li>     
+    <a href="{{ post.url | relative_url }}"><img src="assets/images/{{ post.title | replace: " ", "-" | downcase }}/feature.jpg" alt="featured"><br>
     <h2><a class="post-link" href="{{ post.url | relative_url }}">
 
         {{ post.title | escape }} | {% assign words = {{post.category}} | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}</a>
