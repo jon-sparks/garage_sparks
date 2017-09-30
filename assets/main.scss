@@ -224,3 +224,46 @@ body, html {
         }
     }
 }
+
+
+@media screen and (max-width: 400px) {
+    
+    .side {
+        display: none;
+    }
+    
+    .wrapper {
+        grid-template-areas: 
+            "header header"
+            "content content"
+            "footer footer";
+    }
+    
+    .page-content {
+        padding: 0px;
+    }
+    
+    .post-list {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px;
+        margin: 0px;
+            .excerpt {
+                width: 95%;
+                margin: 20px auto 10px auto;
+            }
+            hr {
+                padding: 0px 20px 0px 20px;
+                border-color: rgba(0,0,0,0.2);
+                margin: 20px 0px 40px 0px;
+            }
+            img {
+                border: none;
+            }
+        }
+    
+    .page-heading {
+        margin-top: 30px;
+    }
+    
+}
