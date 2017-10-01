@@ -150,6 +150,7 @@ body, html {
     background: black;
     grid-area: footer;
     color: white;
+    text-align: center;
 }
 
 .post-header-img {
@@ -248,22 +249,49 @@ body, html {
         max-width: 100%;
         padding: 0px;
         margin: 0px;
-            .excerpt {
-                width: 95%;
-                margin: 20px auto 10px auto;
-            }
-            hr {
-                padding: 0px 20px 0px 20px;
-                border-color: rgba(0,0,0,0.2);
-                margin: 20px 0px 40px 0px;
-            }
-            img {
-                border: none;
-            }
+        .excerpt {
+            width: 95%;
+            margin: 20px auto 10px auto;
         }
+        hr {
+            padding: 0px 20px 0px 20px;
+            border-color: rgba(0,0,0,0.2);
+            margin: 20px 0px 40px 0px;
+        }
+        img {
+            border: none;
+        }
+    }
     
     .page-heading {
         margin-top: 30px;
+    }
+    
+    .post-content {
+        position: relative;
+        top: -150px;
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        background: white;
+        box-shadow: none;
+        hr {
+            margin: 0px 40px 23px 40px;
+            border-color: rgba(0,0,0,0.3);
+        }
+        img {
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+        }
+        .post-info {
+            width: 90%;
+        }
+    }
+    
+    .home-button {
+        top: -55px;
+        left: 0px;
+        border-radius: 0px 10px 0px 0px; 
+        position: relative;
     }
     
 }

@@ -8,10 +8,12 @@ layout: default
 {% for post in site.posts %}
   <li>     
     <a href="{{ post.url | relative_url }}"><img src="assets/images/{{ post.title | replace: " ", "-" | downcase }}/feature.jpg" alt="featured"><br>
-    <h2><a class="post-link" href="{{ post.url | relative_url }}">
+    <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">
 
-        {{ post.title | escape }} | {% assign words = {{post.category}} | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}</a>
-
+        {{ post.title | escape }} | {% assign words = {{ post.category }} | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}
+        
+        </a>
     </h2>
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <span class="post-meta">{{ post.date | date: date_format }}</span></a>
