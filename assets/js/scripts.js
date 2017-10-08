@@ -23,7 +23,7 @@ $(window).scroll(function(){
 $(document).ready(function(){
     $('#down-button').click(function() {
         $('html,body').animate({
-            scrollTop: $(".content").offset().top},
+            scrollTop: $(".page-content").offset().top},
             1000);
     });
 });
