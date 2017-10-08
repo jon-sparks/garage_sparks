@@ -324,5 +324,14 @@ body, html {
         background: black;
         overflow: hidden;
     }
+  
+    .up-button {
+        position: fixed;
+        height: 60px;
+        width: 100% !important;
+        bottom: 0px;
+        background: white;
+        opacity: 0.6;
+    }
     
 }
