@@ -11,7 +11,11 @@ layout: default
     <h2>
         <a class="post-link" href="{{ post.url | relative_url }}">
 
-        {{ post.title | escape }} | {% assign words = {{ post.category }} | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}
+        {{ post.title }} | {{ post.category | replace: "-", " " | capitalize }}
+            
+        {% assign words = {{ post.category }} | split: "-" %} {% for word in words %} {{ word }} {% endfor %}
+            
+        {{ words }}
         
         </a>
     </h2>
