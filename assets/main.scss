@@ -205,6 +205,30 @@ body, html {
         width: 100%;
         margin: 10px 0px 10px 0px;
     }
+    .up-button {
+        position: fixed;
+        height: 60px;
+        width: 200px;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        margin: 0px auto 0px auto;
+        background: white;
+        opacity: 0.6;
+        display: none;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+        p {
+          color: black;
+          font-family: quicksand;
+          font-size: 20px;
+        }
+    }
+    .show {
+        display: block;
+    }
     .post-info {
         position: relative;
         width: 70%;
