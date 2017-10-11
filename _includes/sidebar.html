@@ -1,6 +1,20 @@
 <div class="side">
-    
-    <div id="media"></div>
+  
+    <ul>
+      {% for post in site.posts %}
+        {% if post.category == "event-coverage" %}
+          <li>{{ post.category }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  
+    <ul>
+      {% for post in site.posts %}
+        {% if post.category == "featured-car" %}
+          <li>{{ post.category }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
     
 </div>
 

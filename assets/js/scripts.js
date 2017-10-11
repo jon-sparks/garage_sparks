@@ -18,6 +18,8 @@ $(window).scroll(function(){
     
 })
 
+
+// Firefox back to top button
 $(window).bind('DOMMouseScroll', function(e){
    if(e.originalEvent.detail > 0) {
        //scroll down
@@ -38,7 +40,6 @@ $(window).bind('DOMMouseScroll', function(e){
      };
    };
 });
-
 
 $(document).ready(function(){
   
