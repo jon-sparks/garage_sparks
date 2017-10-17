@@ -7,8 +7,10 @@ layout: post
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-      
-    <div class="post-header-img" {% if page.featured-img %} style="background-image: url('{{ page.featured-img }}');" {% endif %}></div>
+     
+	<div class="post-header-img" style="background-image: url({{ page.image_folder }}/feature.jpg);">
+		<div class="feature-filter"></div>  
+	</div>
 
   </header>
 
@@ -25,7 +27,7 @@ layout: post
       </div>
       
       <div class="post-info">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>  
+        <h1 class="post-title" itemprop="name headline">{{ page.title | upcase }}</h1>  
 
         <p class="post-meta">       
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -36,7 +38,7 @@ layout: post
           {% if page.author %}
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
           {% endif %}
-            
+			            
           {{ content }}
             
         </p>

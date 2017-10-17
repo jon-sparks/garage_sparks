@@ -2,7 +2,7 @@
 layout: post
 title:  "Fast Car Festival"
 date:   2017-06-07 14:40:31 +0100
-image_folder: /assets/images/fast-car-fest
+image_folder: /assets/images/fast-car-festival
 category: event-coverage
 ---
 
