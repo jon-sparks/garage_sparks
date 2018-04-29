@@ -1,0 +1,342 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: quicksand;
+    background: lightgrey;
+}
+
+#logo {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: 271px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -170px;
+    background: url(garagesparks-white.png)center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#glass {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    background: lightpink;
+    opacity: 0.2;
+    overflow: hidden;
+}
+
+#down-button {
+    position: absolute;
+    grid-area: header;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    border: solid white 3px;
+    border-radius: 50%;
+    bottom: 30px;
+    left: 50%;
+    opacity: 0.8;
+    background: url(down-icon.png) no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#down-button:hover {
+    opacity: 1;
+    background: hotpink;
+    transition: all ease-in-out;
+    cursor: pointer;
+}
+
+.post-list {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    max-width: 80%;
+    padding: 0px;
+    margin: 0px auto;
+    .excerpt {
+        position: relative;
+        width: 85%;
+        margin: 20px auto 10px auto;
+    }
+    .read-more {
+        text-decoration: underline;
+    }
+    img {
+        width: 100%;
+        border: solid black 10px;
+    }
+    hr {
+        padding: 0px 20px 0px 20px;
+        border-color: rgba(0,0,0,0.2);
+        margin: 20px 0px 40px 0px;
+    }
+}
+    
+.wrapper {
+    display: grid;
+    grid-template-columns: 80vw 20vw;
+    grid-template-rows: 100vh auto 200px;
+/*        grid-gap: 5px 5px;*/
+    grid-template-areas: 
+        "header header"
+        "content content" //side
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    overflow: hidden;
+}
+
+.header-img {
+    width: 100%;
+    height: 1500px;
+    background: url(header-bg4.jpg) 0% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.page-heading {
+    font-family: raleway;
+    max-width: 80%;
+    padding: 20px;
+    font-size: 50px;
+    margin: 0px auto 0px auto;
+//    background: black;
+    color: black;
+//    text-align: center;
+}
+
+.page-content {
+    background: white;
+    grid-area: content;
+    padding: 30px;
+    z-index: 10;
+    h2 {
+        margin: 10px 0px 0px 0px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}  
+
+.side {
+    background: white;
+    grid-area: side;
+    z-index: 0;
+    border-left: solid 1px lightgrey;
+}
+
+.site-footer {
+    background: black;
+    grid-area: footer;
+    color: white;
+    text-align: center;
+}
+
+.post-header-img {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+	background-attachment: fixed;
+	background-position: 0% 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	.feature-filter {
+		position: absolute;
+		height: 600px;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		background: black;
+		opacity: 0.6;
+	}
+}
+
+.home-button {
+    background: url(house.svg) center;
+    background-repeat: no-repeat;
+    background-size: 38px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    top: -55px;
+    left: -30px;
+    border-radius: 10px 10px 0px 0px; 
+    position: relative;
+}
+
+.post-logo {
+    position: absolute;
+    top: -350px;
+    left: 0px;
+    height: 270px;
+    width: 100%;
+    background: url(garagesparks-white.png)center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    z-index: 20;
+}
+
+.post-content {
+    position: relative;
+    top: -150px;
+    width: 80%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 30px 5px 30px;
+    background: white;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+    hr {
+        margin: 0px 90px 23px 90px;
+        border-color: rgba(0,0,0,0.3);
+    }
+    img {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+    .up-button {
+        position: fixed;
+        height: 60px;
+        width: 200px;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        margin: 0px auto 0px auto;
+        background: white;
+        opacity: 0.6;
+        display: none;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+        p {
+          color: black;
+          font-family: quicksand;
+          font-size: 20px;
+        }
+    }
+    .show {
+        display: block;
+    }
+    .post-info {
+        position: relative;
+        width: 70%;
+        font-family: sans-serif;
+        margin: 0px auto 20px auto;
+        h1 {
+			font-family: raleway;
+            margin: 5px 0px 5px 0px;
+            font-size: 50px;
+        }
+        .post-meta {
+            font-size: 18px;
+            margin: 0px;
+            color: grey;
+        }
+        p {
+            color: gray;
+            line-height: 25px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    
+    .side {
+        display: none;
+    }
+    
+    .wrapper {
+        grid-template-areas: 
+            "header header"
+            "content content"
+            "footer footer";
+    }
+    
+    .page-content {
+        padding: 0px;
+    }
+    
+    .post-list {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px;
+        margin: 0px;
+        .excerpt {
+            width: 95%;
+            margin: 20px auto 10px auto;
+        }
+        hr {
+            padding: 0px 20px 0px 20px;
+            border-color: rgba(0,0,0,0.2);
+            margin: 20px 0px 40px 0px;
+        }
+        img {
+            border: none;
+        }
+    }
+    
+    .page-heading {
+        margin-top: 30px;
+    }
+    
+    .post-content {
+        position: relative;
+        top: -150px;
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        background: white;
+        box-shadow: none;
+        hr {
+            margin: 0px 40px 23px 40px;
+            border-color: rgba(0,0,0,0.3);
+        }
+        img {
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+        }
+        .post-info {
+            width: 90%;
+        }
+    }
+    
+    .home-button {
+        top: -55px;
+        left: 0px;
+        border-radius: 0px 10px 0px 0px; 
+        position: relative;
+    }
+  
+    .header-img {
+        width: 100%;
+        height: 1500px;
+        background: black;
+        overflow: hidden;
+    }
+  
+    .up-button {
+        position: fixed;
+        height: 60px;
+        width: 100% !important;
+        bottom: 0px;
+        background: white;
+        opacity: 0.6;
+    }
+    
+}
